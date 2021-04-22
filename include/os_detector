@@ -148,7 +148,7 @@ bsd_replace_sed(){
 
 # Functions to manage dates depending on OS
 if [ "$OSTYPE" == "linux-gnu" ] || [ "$OSTYPE" == "linux-musl" ]; then
-  TEMP_REPORT_FILE=$(mktemp -t -p /tmp prowler.cred_report-XXXXXX)
+  TEMP_REPORT_FILE=$(mktemp -t -p /alloc/data prowler.cred_report-XXXXXX)
   # function to compare in days, usage how_older_from_today date
   # date format %Y-%m-%d
   how_older_from_today() {
