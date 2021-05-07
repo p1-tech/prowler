@@ -44,11 +44,11 @@ extra91(){
 	    if [[ `$AWSCLI ec2 describe-subnets $PROFILE_OPT --region $regx --subnet-id $SUBNET --filter Name=vpc-id,Values=${PUB_VPC_STRING} --output text` ]]; then
 		# This Subnet is in a VPC with a public Route Table, is it associated with a different RT?
 		if [[ ! `$AWSCLI ec2 describe-route-tables $PROFILE_OPT --region $regx --filters Name=association.subnet-id,Values=${SUBNET} --query 'RouteTables[*].[SubnetId]' --output text` ]]; then
-                    LIST_OF_PUB_SUBNETS=$"${LIST_OF_PUB_SUBNETS}${LF}${SUBNET}"
+                    LIST_OF_PUB_SUBNETS=$"${LIST_OF_PUB_SUBNETS:+$LIST_OF_PUB_SUBNETS${LF}}${SUBNET}"
                 fi
             fi
         fi
-    done 
+    done
     if [[ $LIST_OF_PUB_SUBNETS ]];then
       while read -r subnet;do
         SUBNET_NAME=$(echo $subnet | awk '{ print $1; }')
