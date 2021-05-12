@@ -19,7 +19,14 @@ EXTENSION_ASFF="asff-json"
 EXTENSION_TEXT="txt"
 EXTENSION_HTML="html"
 OUTPUT_DATE=$(date -u +"%Y%m%d%H%M%S")
-OUTPUT_DIR="${PROWLER_DIR}/output" # default output if none 
+
+
+if [[ -z $NOMAD_ALLOC_DIR ]]; then
+  OUTPUT_DIR="${PROWLER_DIR}/output"
+else
+  OUTPUT_DIR="${PROWLER_DIR}/../alloc/data"
+fi
+
 OUTPUT_FILE_NAME="${OUTPUT_DIR}/prowler-output-${ACCOUNT_NUM}-${OUTPUT_DATE}"
 HTML_LOGO_URL="https://github.com/toniblyx/prowler/"
 HTML_LOGO_IMG="https://github.com/toniblyx/prowler/raw/2.4/util/html/prowler-logo-new.png"
