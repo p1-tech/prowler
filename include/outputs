@@ -19,6 +19,7 @@ EXTENSION_ASFF="asff-json"
 EXTENSION_TEXT="txt"
 EXTENSION_HTML="html"
 OUTPUT_DATE=$(date -u +"%Y%m%d%H%M%S")
+<<<<<<< HEAD
 
 
 if [[ -z $NOMAD_ALLOC_DIR ]]; then
@@ -27,6 +28,9 @@ else
   OUTPUT_DIR="${PROWLER_DIR}/../alloc/data"
 fi
 
+=======
+OUTPUT_DIR="${PROWLER_DIR}/../alloc/data" # default output if none 
+>>>>>>> e1992ffa7fd1dfb297038749a2abe51fac83be8d
 OUTPUT_FILE_NAME="${OUTPUT_DIR}/prowler-output-${ACCOUNT_NUM}-${OUTPUT_DATE}"
 HTML_LOGO_URL="https://github.com/toniblyx/prowler/"
 HTML_LOGO_IMG="https://github.com/toniblyx/prowler/raw/2.4/util/html/prowler-logo-new.png"
