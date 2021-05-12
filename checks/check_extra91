@@ -18,7 +18,7 @@ CHECK_SEVERITY_extra91="Medium"
 CHECK_ASFF_RESOURCE_TYPE_extra91="Subnet"
 CHECK_SERVICENAME_extra91="ec2"
 CHECK_RISK_extra91='Publicly accessible subnets could expose sensitive data to bad actors.'
-CHECK_REMEDIATION_extra91='Ensure the subnet should be publicly accessible. If publiccly exposed ensure proper instance security.'
+CHECK_REMEDIATION_extra91='Ensure the subnet should be publicly accessible. If publicly exposed ensure proper instance security.'
 CHECK_DOC_extra91='https://docs.aws.amazon.com/waf/latest/developerguide/web-acl-associating-aws-resource.html'
 CHECK_CAF_EPIC_extra91='Data Protection'
 
