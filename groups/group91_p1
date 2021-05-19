@@ -14,5 +14,5 @@
 GROUP_ID[91]='p1'
 GROUP_NUMBER[91]='91.0'
 GROUP_TITLE[91]='p1 Audit Group - [p1] ****************************'
-GROUP_RUN_BY_DEFAULT[91]='N' # run it when execute_all is called
+GROUP_RUN_BY_DEFAULT[91]='Y' # run it when execute_all is called
 GROUP_CHECKS[91]='extra910'
