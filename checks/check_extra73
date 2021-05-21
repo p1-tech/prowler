@@ -91,8 +91,13 @@ extra73(){
       continue
     fi
     if [[ $BUCKET_LOCATION == "None" ]]; then
-      BUCKET_LOCATION="us-east-1"
+      if [[ $AWS_REGION == "us-gov-west-1" ]]; then
+        BUCKET_LOCATION="us-gov-west-1"
+      else
+        BUCKET_LOCATION="us-east-1"
+      fi
     fi
+
     if [[ $BUCKET_LOCATION == "EU" ]]; then
       BUCKET_LOCATION="eu-west-1"
     fi
